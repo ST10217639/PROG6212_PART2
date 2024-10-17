@@ -1,0 +1,16 @@
+C:\Users\lab_services_student\Documents\Visual Studio Projects\ContractManagementClaimSystem\bin\Debug\ContractManagementClaimSystem.exe.config
+C:\Users\lab_services_student\Documents\Visual Studio Projects\ContractManagementClaimSystem\bin\Debug\ContractManagementClaimSystem.exe
+C:\Users\lab_services_student\Documents\Visual Studio Projects\ContractManagementClaimSystem\bin\Debug\ContractManagementClaimSystem.pdb
+C:\Users\lab_services_student\Documents\Visual Studio Projects\ContractManagementClaimSystem\obj\Debug\ContractManagementClaimSystem.csproj.AssemblyReference.cache
+C:\Users\lab_services_student\Documents\Visual Studio Projects\ContractManagementClaimSystem\obj\Debug\MainWindow.g.cs
+C:\Users\lab_services_student\Documents\Visual Studio Projects\ContractManagementClaimSystem\obj\Debug\App.g.cs
+C:\Users\lab_services_student\Documents\Visual Studio Projects\ContractManagementClaimSystem\obj\Debug\ContractManagementClaimSystem_MarkupCompile.cache
+C:\Users\lab_services_student\Documents\Visual Studio Projects\ContractManagementClaimSystem\obj\Debug\MainWindow.baml
+C:\Users\lab_services_student\Documents\Visual Studio Projects\ContractManagementClaimSystem\obj\Debug\ContractManagementClaimSystem.g.resources
+C:\Users\lab_services_student\Documents\Visual Studio Projects\ContractManagementClaimSystem\obj\Debug\ContractManagementClaimSystem.Properties.Resources.resources
+C:\Users\lab_services_student\Documents\Visual Studio Projects\ContractManagementClaimSystem\obj\Debug\ContractManagementClaimSystem.csproj.GenerateResource.cache
+C:\Users\lab_services_student\Documents\Visual Studio Projects\ContractManagementClaimSystem\obj\Debug\ContractManagementClaimSystem.csproj.CoreCompileInputs.cache
+C:\Users\lab_services_student\Documents\Visual Studio Projects\ContractManagementClaimSystem\obj\Debug\ContractManagementClaimSystem.exe
+C:\Users\lab_services_student\Documents\Visual Studio Projects\ContractManagementClaimSystem\obj\Debug\ContractManagementClaimSystem.pdb
+C:\Users\lab_services_student\Documents\Visual Studio Projects\ContractManagementClaimSystem\obj\Debug\ApprovalWindow.g.cs
+C:\Users\lab_services_student\Documents\Visual Studio Projects\ContractManagementClaimSystem\obj\Debug\ApprovalWindow.baml

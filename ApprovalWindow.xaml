@@ -1,0 +1,18 @@
+﻿<Window x:Class="ContractManagementClaimSystem.ApprovalWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Claim Approval" Height="450" Width="800" Background="Gray">
+    <Grid>
+        <TextBlock Text="Programme Coordinator / Academic Manager Claim Approval" FontSize="25" FontWeight="Bold" 
+                   HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,10,0,0" Foreground="White"/>
+
+        <ListBox Name="ClaimsListBox" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="50,80,0,0" Width="600" Height="200" 
+                 Background="White" BorderBrush="Purple" BorderThickness="2"/>
+
+        <Button Content="Approve Claim" Width="150" Height="40" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="100,300,0,0" 
+                Click="ApproveClaimButton_Click" Background="Green" Foreground="White" BorderBrush="Purple" BorderThickness="2"/>
+
+        <Button Content="Reject Claim" Width="150" Height="40" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="434,300,0,0" 
+                Click="RejectClaimButton_Click" Background="Red" Foreground="White" BorderBrush="Purple" BorderThickness="2"/>
+    </Grid>
+</Window>
