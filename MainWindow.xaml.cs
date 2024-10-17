@@ -1,84 +1,98 @@
-﻿using Microsoft.Win32;
+﻿using ContractManagementClaimSystem;
+using Microsoft.Win32;
 using System;
 using System.Collections.Generic;
 using System.Windows;
-using ContractManagementClaimSystem;
 
 namespace ContractManagementClaimSystem
 {
     public partial class MainWindow : Window
     {
-        private string _uploadedFilePath;
-        private List<Claim> _claims = new List<Claim>();
-        private int _claimIdCounter = 1;
-        private Claim _currentClaim;
+        private List<Claim> _claims;
 
         public MainWindow()
         {
             InitializeComponent();
+            _claims = new List<Claim>(); // Initialize the claims list
         }
 
         private void BrowseButton_Click(object sender, RoutedEventArgs e)
         {
-            OpenFileDialog openFileDialog = new OpenFileDialog();
-            openFileDialog.Filter = "PDF Files|*.pdf|Word Files|*.docx|All Files|*.*";
-            if (openFileDialog.ShowDialog() == true)
+            try
             {
-                _uploadedFilePath = openFileDialog.FileName;
-                string fileName = System.IO.Path.GetFileName(_uploadedFilePath);
-                FileNameTextBlock.Text = $"File uploaded: {fileName}";
+                OpenFileDialog openFileDialog = new OpenFileDialog();
+                openFileDialog.Filter = "PDF Files|*.pdf|Word Files|*.docx|All Files|*.*";
+                if (openFileDialog.ShowDialog() == true)
+                {
+                    string filePath = openFileDialog.FileName;
+                    FileNameTextBlock.Text = System.IO.Path.GetFileName(filePath); // Display the uploaded file name
+                    MessageBox.Show("File uploaded successfully.");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error occurred while uploading file: {ex.Message}");
             }
         }
 
         private void SubmitClaimButton_Click(object sender, RoutedEventArgs e)
         {
-            string lecturerName = LecturerNameTextBox.Text;
-            string hoursWorkedText = HoursWorkedTextBox.Text;
-            string hourlyRateText = HourlyRateTextBox.Text;
-
-            if (string.IsNullOrEmpty(lecturerName) || string.IsNullOrEmpty(hoursWorkedText) || string.IsNullOrEmpty(hourlyRateText))
+            try
             {
-                MessageBox.Show("Please fill all the required fields.");
-                return;
+                // Collect data from the form
+                string lecturerName = LecturerNameTextBox.Text;
+                string hoursWorkedText = HoursWorkedTextBox.Text;
+
+                if (string.IsNullOrEmpty(lecturerName) || string.IsNullOrEmpty(hoursWorkedText))
+                {
+                    MessageBox.Show("Please fill all the required fields.");
+                    return;
+                }
+
+                // Add new claim
+                int hoursWorked = int.Parse(hoursWorkedText); // Possible exception if the input is not a valid number
+                var newClaim = new Claim
+                {
+                    Id = _claims.Count + 1, // Simulate auto-increment for claim ID
+                    LecturerName = lecturerName,
+                    HoursWorked = hoursWorked,
+                    Status = "Pending",
+                    SupportingDocumentPath = FileNameTextBlock.Text // Store the file name
+                };
+                _claims.Add(newClaim);
+
+                StatusTextBlock.Text = "Status: Claim Submitted Successfully!";
+                MessageBox.Show("Claim submitted successfully!");
             }
-
-            if (string.IsNullOrEmpty(_uploadedFilePath))
+            catch (FormatException)
             {
-                MessageBox.Show("Please upload a supporting document.");
-                return;
+                MessageBox.Show("Please enter a valid number for hours worked.");
             }
-
-            // Create a new claim
-            _currentClaim = new Claim
+            catch (Exception ex)
             {
-                Id = _claimIdCounter++,
-                LecturerName = lecturerName,
-                HoursWorked = int.Parse(hoursWorkedText),
-                HourlyRate = decimal.Parse(hourlyRateText),
-                Status = "Pending",
-                SupportingDocumentPath = _uploadedFilePath
-            };
-            _claims.Add(_currentClaim);
-
-            // Set data context to allow real-time updates
-            DataContext = _currentClaim;
-
-            StatusTextBlock.Text = "Status: Claim Submitted Successfully!";
-            MessageBox.Show("Claim submitted successfully!");
+                MessageBox.Show($"Error occurred while submitting claim: {ex.Message}");
+            }
         }
 
         private void OpenApprovalWindow_Click(object sender, RoutedEventArgs e)
         {
-            ApprovalWindow approvalWindow = new ApprovalWindow(_claims);
-            approvalWindow.ClaimStatusChanged += ApprovalWindow_ClaimStatusChanged;
-            approvalWindow.Show();
+            try
+            {
+                var approvalWindow = new ApprovalWindow(_claims);
+                approvalWindow.ClaimStatusChanged += OnClaimStatusChanged;
+                approvalWindow.Show();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error opening the approval window: {ex.Message}");
+            }
         }
 
-        // This event handler updates the status in real-time when a claim's status changes
-        private void ApprovalWindow_ClaimStatusChanged(object sender, EventArgs e)
+        private void OnClaimStatusChanged(object sender, EventArgs e)
         {
-            // Refresh the current claim's status
-            StatusTextBlock.Text = $"Status: {_currentClaim.Status}";
+            // Update the status of the claim in real-time after approval/rejection
+            MessageBox.Show("Claim status updated. Please refresh to view the latest information.");
+            StatusTextBlock.Text = "Status: Updated in Real-Time!";
         }
     }
 }

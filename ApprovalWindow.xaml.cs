@@ -31,33 +31,47 @@ namespace ContractManagementClaimSystem
 
         private void ApproveClaimButton_Click(object sender, RoutedEventArgs e)
         {
-            if (ClaimsListBox.SelectedItem != null)
+            try
             {
-                var selectedClaim = ClaimsListBox.SelectedItem.ToString();
-                int claimId = int.Parse(selectedClaim.Split(' ')[1]);
-                UpdateClaimStatus(claimId, "Approved");
-                MessageBox.Show("Claim Approved!");
-                LoadClaims();
+                if (ClaimsListBox.SelectedItem != null)
+                {
+                    var selectedClaim = ClaimsListBox.SelectedItem.ToString();
+                    int claimId = int.Parse(selectedClaim.Split(' ')[1]);
+                    UpdateClaimStatus(claimId, "Approved");
+                    MessageBox.Show("Claim Approved!");
+                    LoadClaims();
+                }
+                else
+                {
+                    MessageBox.Show("Please select a claim to approve.");
+                }
             }
-            else
+            catch (Exception ex)
             {
-                MessageBox.Show("Please select a claim to approve.");
+                MessageBox.Show($"Error while approving claim: {ex.Message}");
             }
         }
 
         private void RejectClaimButton_Click(object sender, RoutedEventArgs e)
         {
-            if (ClaimsListBox.SelectedItem != null)
+            try
             {
-                var selectedClaim = ClaimsListBox.SelectedItem.ToString();
-                int claimId = int.Parse(selectedClaim.Split(' ')[1]);
-                UpdateClaimStatus(claimId, "Rejected");
-                MessageBox.Show("Claim Rejected!");
-                LoadClaims();
+                if (ClaimsListBox.SelectedItem != null)
+                {
+                    var selectedClaim = ClaimsListBox.SelectedItem.ToString();
+                    int claimId = int.Parse(selectedClaim.Split(' ')[1]);
+                    UpdateClaimStatus(claimId, "Rejected");
+                    MessageBox.Show("Claim Rejected!");
+                    LoadClaims();
+                }
+                else
+                {
+                    MessageBox.Show("Please select a claim to reject.");
+                }
             }
-            else
+            catch (Exception ex)
             {
-                MessageBox.Show("Please select a claim to reject.");
+                MessageBox.Show($"Error while rejecting claim: {ex.Message}");
             }
         }
 
@@ -68,7 +82,7 @@ namespace ContractManagementClaimSystem
             {
                 claim.Status = status;
 
-                // Fire the event to notify the MainWindow of the status change
+                // Trigger the event to notify MainWindow
                 ClaimStatusChanged?.Invoke(this, EventArgs.Empty);
             }
         }
