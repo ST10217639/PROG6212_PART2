@@ -1,4 +1,5 @@
 ﻿using ContractManagementClaimSystem;
+using System;
 using System.Collections.Generic;
 using System.Windows;
 
@@ -7,6 +8,9 @@ namespace ContractManagementClaimSystem
     public partial class ApprovalWindow : Window
     {
         private List<Claim> _claims;
+
+        // Declare the event to notify when a claim status changes
+        public event EventHandler ClaimStatusChanged;
 
         public ApprovalWindow(List<Claim> claims)
         {
@@ -63,6 +67,9 @@ namespace ContractManagementClaimSystem
             if (claim != null)
             {
                 claim.Status = status;
+
+                // Fire the event to notify the MainWindow of the status change
+                ClaimStatusChanged?.Invoke(this, EventArgs.Empty);
             }
         }
     }

@@ -11,6 +11,7 @@ namespace ContractManagementClaimSystem
         private string _uploadedFilePath;
         private List<Claim> _claims = new List<Claim>();
         private int _claimIdCounter = 1;
+        private Claim _currentClaim;
 
         public MainWindow()
         {
@@ -25,8 +26,6 @@ namespace ContractManagementClaimSystem
             {
                 _uploadedFilePath = openFileDialog.FileName;
                 string fileName = System.IO.Path.GetFileName(_uploadedFilePath);
-
-                // Display the file name on the form
                 FileNameTextBlock.Text = $"File uploaded: {fileName}";
             }
         }
@@ -50,7 +49,7 @@ namespace ContractManagementClaimSystem
             }
 
             // Create a new claim
-            var claim = new Claim
+            _currentClaim = new Claim
             {
                 Id = _claimIdCounter++,
                 LecturerName = lecturerName,
@@ -59,7 +58,10 @@ namespace ContractManagementClaimSystem
                 Status = "Pending",
                 SupportingDocumentPath = _uploadedFilePath
             };
-            _claims.Add(claim);
+            _claims.Add(_currentClaim);
+
+            // Set data context to allow real-time updates
+            DataContext = _currentClaim;
 
             StatusTextBlock.Text = "Status: Claim Submitted Successfully!";
             MessageBox.Show("Claim submitted successfully!");
@@ -68,7 +70,15 @@ namespace ContractManagementClaimSystem
         private void OpenApprovalWindow_Click(object sender, RoutedEventArgs e)
         {
             ApprovalWindow approvalWindow = new ApprovalWindow(_claims);
+            approvalWindow.ClaimStatusChanged += ApprovalWindow_ClaimStatusChanged;
             approvalWindow.Show();
+        }
+
+        // This event handler updates the status in real-time when a claim's status changes
+        private void ApprovalWindow_ClaimStatusChanged(object sender, EventArgs e)
+        {
+            // Refresh the current claim's status
+            StatusTextBlock.Text = $"Status: {_currentClaim.Status}";
         }
     }
 }

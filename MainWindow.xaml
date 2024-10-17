@@ -23,8 +23,26 @@
 
         <Button Content="Submit Claim" Width="129" Height="30" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="592,228,0,0" Click="SubmitClaimButton_Click" Background="White" BorderBrush="Purple" BorderThickness="2"/>
 
-        <TextBlock Name="StatusTextBlock" Text="Status: Pending" FontSize="17" FontWeight="Bold"
-                   HorizontalAlignment="Left" VerticalAlignment="Top" Margin="303,352,0,0" Foreground="Orange"/>
+        <!-- Bind StatusTextBlock to the claim status -->
+        <TextBlock Name="StatusTextBlock" Text="{Binding Path=Status}" FontSize="19" FontWeight="Bold" 
+                   HorizontalAlignment="Left" VerticalAlignment="Top" Margin="400,300,0,0">
+            <TextBlock.Style>
+                <Style TargetType="TextBlock">
+                    <Style.Triggers>
+                        <!-- Trigger to change color based on status -->
+                        <DataTrigger Binding="{Binding Status}" Value="Approved">
+                            <Setter Property="Foreground" Value="Green"/>
+                        </DataTrigger>
+                        <DataTrigger Binding="{Binding Status}" Value="Rejected">
+                            <Setter Property="Foreground" Value="Red"/>
+                        </DataTrigger>
+                        <DataTrigger Binding="{Binding Status}" Value="Pending">
+                            <Setter Property="Foreground" Value="Orange"/>
+                        </DataTrigger>
+                    </Style.Triggers>
+                </Style>
+            </TextBlock.Style>
+        </TextBlock>
         <Button Content="Open Approval Window" Width="200" Height="40" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="50,345,0,0" Click="OpenApprovalWindow_Click" Background="White" BorderBrush="Purple" BorderThickness="2"/>
     </Grid>
 </Window>
