@@ -3,16 +3,22 @@
   "WorkspaceRootPath": "C:\\Users\\lab_services_student\\Documents\\Visual Studio Projects\\ContractManagementClaimSystem\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{AF9AD5B5-AD91-4393-9CBA-EC4DFD344725}|ContractManagementClaimSystem.csproj|C:\\Users\\lab_services_student\\Documents\\Visual Studio Projects\\ContractManagementClaimSystem\\approvalwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AF9AD5B5-AD91-4393-9CBA-EC4DFD344725}|ContractManagementClaimSystem.csproj|solutionrelative:approvalwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{BBDE9DC4-D5F8-4DBF-BF63-89C574E92389}|..\\ContractManagementClaimSystem.Tests\\ContractManagementClaimSystem.Tests.csproj|c:\\users\\lab_services_student\\documents\\visual studio projects\\contractmanagementclaimsystem.tests\\claimtests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AF9AD5B5-AD91-4393-9CBA-EC4DFD344725}|ContractManagementClaimSystem.csproj|c:\\users\\lab_services_student\\documents\\visual studio projects\\contractmanagementclaimsystem\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AF9AD5B5-AD91-4393-9CBA-EC4DFD344725}|ContractManagementClaimSystem.csproj|solutionrelative:mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{00000000-0000-0000-0000-000000000000}|\u003CSolution\u003E|ContractManagementClaimSystem||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
     },
     {
       "AbsoluteMoniker": "D:0:0:{AF9AD5B5-AD91-4393-9CBA-EC4DFD344725}|ContractManagementClaimSystem.csproj|C:\\Users\\lab_services_student\\Documents\\Visual Studio Projects\\ContractManagementClaimSystem\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{AF9AD5B5-AD91-4393-9CBA-EC4DFD344725}|ContractManagementClaimSystem.csproj|solutionrelative:mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AF9AD5B5-AD91-4393-9CBA-EC4DFD344725}|ContractManagementClaimSystem.csproj|C:\\Users\\lab_services_student\\Documents\\Visual Studio Projects\\ContractManagementClaimSystem\\approvalwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AF9AD5B5-AD91-4393-9CBA-EC4DFD344725}|ContractManagementClaimSystem.csproj|solutionrelative:approvalwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AF9AD5B5-AD91-4393-9CBA-EC4DFD344725}|ContractManagementClaimSystem.csproj|C:\\Users\\lab_services_student\\Documents\\Visual Studio Projects\\ContractManagementClaimSystem\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AF9AD5B5-AD91-4393-9CBA-EC4DFD344725}|ContractManagementClaimSystem.csproj|solutionrelative:mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{AF9AD5B5-AD91-4393-9CBA-EC4DFD344725}|ContractManagementClaimSystem.csproj|C:\\Users\\lab_services_student\\Documents\\Visual Studio Projects\\ContractManagementClaimSystem\\approvalwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
@@ -21,6 +27,9 @@
     {
       "AbsoluteMoniker": "D:0:0:{AF9AD5B5-AD91-4393-9CBA-EC4DFD344725}|ContractManagementClaimSystem.csproj|C:\\Users\\lab_services_student\\Documents\\Visual Studio Projects\\ContractManagementClaimSystem\\claim.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{AF9AD5B5-AD91-4393-9CBA-EC4DFD344725}|ContractManagementClaimSystem.csproj|solutionrelative:claim.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AF9AD5B5-AD91-4393-9CBA-EC4DFD344725}|ContractManagementClaimSystem.csproj|c:\\users\\lab_services_student\\documents\\visual studio projects\\contractmanagementclaimsystem\\||{B270807C-D8C6-49EB-8EBE-8E8D566637A1}|5e9a8ac2-4f34-4521-858f-4c248ba31532"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,7 +39,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 19,
+          "SelectedChildIndex": 15,
           "Children": [
             {
               "$type": "Bookmark",
@@ -51,10 +60,6 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{e1b7d1f8-9b3c-49b1-8f4f-bfc63a88835d}"
             },
             {
               "$type": "Bookmark",
@@ -98,7 +103,36 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ClaimTests.cs",
+              "DocumentMoniker": "C:\\Users\\lab_services_student\\Documents\\Visual Studio Projects\\ContractManagementClaimSystem.Tests\\ClaimTests.cs",
+              "RelativeDocumentMoniker": "..\\ContractManagementClaimSystem.Tests\\ClaimTests.cs",
+              "ToolTip": "C:\\Users\\lab_services_student\\Documents\\Visual Studio Projects\\ContractManagementClaimSystem.Tests\\ClaimTests.cs",
+              "RelativeToolTip": "..\\ContractManagementClaimSystem.Tests\\ClaimTests.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-17T15:21:31.456Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "ContractManagementClaimSystem",
+              "DocumentMoniker": "C:\\Users\\lab_services_student\\Documents\\Visual Studio Projects\\ContractManagementClaimSystem\\ContractManagementClaimSystem.csproj",
+              "RelativeDocumentMoniker": "ContractManagementClaimSystem.csproj",
+              "ToolTip": "C:\\Users\\lab_services_student\\Documents\\Visual Studio Projects\\ContractManagementClaimSystem\\ContractManagementClaimSystem.csproj",
+              "RelativeToolTip": "ContractManagementClaimSystem.csproj",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2024-10-17T15:19:27.892Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{e1b7d1f8-9b3c-49b1-8f4f-bfc63a88835d}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "MainWindow.xaml.cs",
               "DocumentMoniker": "C:\\Users\\lab_services_student\\Documents\\Visual Studio Projects\\ContractManagementClaimSystem\\MainWindow.xaml.cs",
               "RelativeDocumentMoniker": "MainWindow.xaml.cs",
@@ -106,8 +140,7 @@
               "RelativeToolTip": "MainWindow.xaml.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-10T13:10:11.009Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-10T13:10:11.009Z"
             },
             {
               "$type": "Document",
@@ -122,7 +155,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "ApprovalWindow.xaml",
               "DocumentMoniker": "C:\\Users\\lab_services_student\\Documents\\Visual Studio Projects\\ContractManagementClaimSystem\\ApprovalWindow.xaml",
               "RelativeDocumentMoniker": "ApprovalWindow.xaml",
@@ -133,20 +166,19 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "ApprovalWindow.xaml.cs",
               "DocumentMoniker": "C:\\Users\\lab_services_student\\Documents\\Visual Studio Projects\\ContractManagementClaimSystem\\ApprovalWindow.xaml.cs",
               "RelativeDocumentMoniker": "ApprovalWindow.xaml.cs",
               "ToolTip": "C:\\Users\\lab_services_student\\Documents\\Visual Studio Projects\\ContractManagementClaimSystem\\ApprovalWindow.xaml.cs",
               "RelativeToolTip": "ApprovalWindow.xaml.cs",
-              "ViewState": "AgIAADgAAAAAAAAAAAAAAEIAAAAUAAAAAAAAAA==",
+              "ViewState": "AgIAADgAAAAAAAAAAAAAAEAAAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-10T13:27:50.182Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-10T13:27:50.182Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "Claim.cs",
               "DocumentMoniker": "C:\\Users\\lab_services_student\\Documents\\Visual Studio Projects\\ContractManagementClaimSystem\\Claim.cs",
               "RelativeDocumentMoniker": "Claim.cs",
