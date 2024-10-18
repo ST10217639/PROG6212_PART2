@@ -86,6 +86,7 @@ namespace ContractManagementClaimSystem
             {
                 MessageBox.Show($"Error opening the approval window: {ex.Message}");
             }
+            this.Close();
         }
 
         private void OnClaimStatusChanged(object sender, EventArgs e)
